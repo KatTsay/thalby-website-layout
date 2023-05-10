@@ -1,0 +1,786 @@
+@use 'mixin.scss';
+
+* {
+    @include mixin.no-margin;
+}
+
+$dark-col: #1C1B1B;
+$banner-bg: #F0EFEB;
+$black-col: #000000;
+$main-bg: #FFFFFF;
+$society-bg:rgba(204, 204, 204, 0.3);
+$society-bg-sec: rgba(204, 204, 204, 0.6);
+$light-turquoise: #21F7EC;
+$turquoise: #33D3BC;
+$dark-turquois: #18A5C6;
+$brown: #D38F62;
+$red: #F94C43;
+$violet: #D399FF;
+$bg-card-foto: #F0F0F0;
+
+.wrapper {
+    width: 100%;
+    background-color: $main-bg;
+}
+
+$var1: 1440;
+$var2: 1088;
+$var3: 100%;
+
+.container {
+    margin: auto;
+    width: $var2 * $var3 / $var1;
+}
+
+.header-wrapper {
+    background-color: $main-bg;
+    @include mixin.test(space-between, center, 0);
+    margin: auto;
+    padding: 16px;
+}
+
+.navig-logo {
+    width: 600px;
+    @include mixin.test(space-between, center, 0);
+}
+
+.navigation {   
+        ul {
+            @include mixin.test(center, center, 28px);
+            li {
+                list-style-type: none;
+                a {
+                    @include mixin.font ('Roboto', normal, 700, 16px, 26px);
+                    text-decoration: none;
+                    color: $dark-col;
+                }
+            }
+        }
+    }
+
+.navig-icons {
+    @include mixin.test(space-between, center, 0);
+}
+
+.wrapper-banner {
+    width: 100%;
+    background-color: $banner-bg;
+}
+
+.container-banner {
+
+    margin: auto;
+    @include mixin.test(center, center, 0);
+
+    &-text {
+        $var1: 1088;
+        $var2: 544;
+        $var3: 100%;
+        width: $var2 * $var3 / $var1;
+
+        h2 {
+            $var1: 544;
+            $var2: 534;
+            $var3: 100%;
+            width: $var2 * $var3 / $var1;
+            @include mixin.font ('Roboto', normal, 700, 60px, 70px);
+            color: $black-col;
+            margin-bottom: 42px;
+            overflow-y: hidden;
+        }
+
+        p {
+            $var1: 544;
+            $var2: 481;
+            $var3: 100%;
+            width: $var2 * $var3 / $var1;
+            @include mixin.font ('Roboto', normal, 400, 24px, 28px);
+            color: $black-col;
+            margin-bottom: 26px;
+
+        }
+    }
+
+    &-btn {
+        background-color: $black-col;
+        border: 1px solid #000000;
+        border-radius: 100px;
+        width: 129px;
+        height: 36px;
+        color: $main-bg;
+        @include mixin.font ('Roboto', normal, 400, 17px, 20px);
+    }
+}
+
+.container-text {
+    $var1: 1440;
+    $var2: 1064;
+    $var3: 100%;
+    width: $var2 * $var3 / $var1;
+    margin: auto;
+    padding-top: 60px;
+    h3 {
+        @include mixin.font ('Roboto', normal, 700, 36px, 42px);
+        text-align: center;
+        color: $black-col;
+        margin-bottom: 27px;
+    }
+
+    p {
+        $var1: 1064;
+        $var2: 632;
+        $var3: 100%;
+        width: $var2 * $var3 / $var1;
+        @include mixin.font ('Roboto', normal, 400, 20px, 23px);
+        text-align: center;
+        color: $black-col;
+        margin: auto
+    }
+
+    h6 {
+        @include mixin.font ('Roboto', normal, 400, 20px, 23px);
+        text-align: center;
+        color: $black-col;
+        margin-top: 47px;
+    }
+}
+
+.wrapper-sellers {
+    padding-top: 88px;
+    margin-bottom: 248px;
+}
+
+.container-sellers {
+    $var1: 1440;
+    $var2: 1064;
+    $var3: 100%;
+    width: $var2 * $var3 / $var1;
+    margin: auto;
+    padding-top: 60px;
+    @include mixin.test(center, center, 52px);
+    flex-direction: column;
+    
+
+    &-card {
+    @include mixin.test(center, center, 63px);
+    }
+}
+
+.box {
+    ul {
+        @include mixin.test(center, center, 17px);
+        flex-direction: column;
+        li {
+            list-style-type: none;
+            a {
+                text-decoration: none;
+                h4 {
+                    width: 166px;
+                @include mixin.font ('Roboto', normal, 700, 17px, 20px);                    
+                    color: $black-col;
+                    text-align: center;
+                }
+
+                h2 {
+                    @include mixin.font ('Roboto', normal, 400, 17px, 20px);
+                    color: $black-col;
+                    text-align: center;
+                }
+
+                h5 {
+                    @include mixin.font ('Roboto', normal, 700, 17px, 20px);
+                    text-decoration-line: underline;
+                    color: $black-col;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+.wrapper-society-first {
+    background-color: $society-bg;
+}
+
+.container-society {
+    $var1: 1440;
+    $var2: 1164;
+    $var3: 100%;
+    width: $var2 * $var3 / $var1;
+    padding-top: 76px;
+    padding-bottom: 51px;
+    
+}
+
+.box {
+    @include mixin.test(center, center, 50px);
+}
+
+.box-society {
+
+    &-text {
+    $var1: 1164;
+    $var2: 532;
+    $var3: 100%;
+    width: $var2 * $var3 / $var1;
+
+    h3 {
+        @include mixin.font ('Roboto', normal, 700, 36px, 42px);
+        color: $black-col;
+        margin-bottom: 31px;
+    }
+
+    p {
+        @include mixin.font ('Roboto', normal, 400, 36px, 42px);
+        color: $black-col;
+        margin-bottom: 40px;
+    }
+
+    h6 {
+        @include mixin.font ('Roboto', normal, 700, 17px, 20px);
+        color: $black-col;
+        text-decoration-line: underline;
+    }
+    }
+}
+
+.second {
+    flex-flow: row-reverse;
+}
+
+.wrapper-society-second {
+    background-color: $society-bg-sec;
+}
+
+.wrapper-circle {
+    padding-top: 190px;
+    margin-bottom: 290px;
+}
+
+.container-circle {
+    @include mixin.test(center, center, 69px);
+    flex-direction: column;
+
+
+    h2 {
+        @include mixin.font ('Roboto', normal, 400, 36px, 42px);
+        text-align: center;
+        color: $black-col;
+    }
+
+    h4 {
+        @include mixin.font ('Roboto', normal, 700, 36px, 42px);
+        text-align: center;
+        color: $black-col;
+        margin-top: 163px;
+       
+    }
+
+    &-second {
+        width: 1088px;
+        @include mixin.test(space-around, center, 0);
+    }
+
+    &-first {
+        width: 1088px;
+        @include mixin.test(space-around, center, 0);
+
+        &-item {
+            @include mixin.test(center, center, 26px);
+            flex-direction: column;
+
+            p {
+                @include mixin.font ('Roboto', normal, 700, 30px, 35px);
+                text-align: center;
+                color: $black-col;
+                overflow-y: hidden;
+            }
+        }
+    }
+
+}
+
+.circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+}
+
+.c-f {
+    background-color: $light-turquoise;
+}
+
+.c-s {
+    background-color: $turquoise;
+}
+
+.c-t {
+    background-color: $dark-turquois;
+}
+
+.c-fo {
+    background-color: $brown;
+}
+
+.c-fi {
+    background-color: $red;
+}
+
+.c-si {
+    background-color: $violet;
+}
+
+.wrapper-foto-card {
+    background-color: $bg-card-foto;
+
+}
+
+.container-foto-card {
+    position: relative;
+    $var1: 1164;
+    $var2: 532;
+    $var3: 100%;
+    width: $var2 * $var3 / $var1;
+    @include mixin.test(center, center, 128px);
+    flex-direction: column;
+    padding-bottom: 52px;
+    padding-top: 60px;
+
+}
+
+.card-item {
+    
+    height: 240px;
+    @include mixin.test(space-between, center, 0);
+    flex-direction: column;
+    h2 {
+        @include mixin.font ('Roboto', normal, 700, 22px, 26px);
+        text-align: center;
+        color: $black-col;
+        letter-spacing: 0.6px
+    }
+
+    p {
+        @include mixin.font ('Roboto', normal, 400, 19px, 22px);
+        text-align: center;
+        color: $black-col;
+    }
+
+    h5 {
+        @include mixin.font ('Roboto', normal, 700, 18px, 21px);
+        text-align: center;
+        text-decoration-line: underline;
+        color: $black-col;
+    }
+}
+
+.foto-c {
+    @include mixin.test(space-between, center, 0px);
+}
+
+.image-first::before {
+    content: "";
+    background-image: url(../images/man.png);
+    width: 288px;
+    height: 351px;
+    position: absolute;
+    left: 26%;
+    top: 520%;
+    background-repeat: no-repeat;
+}
+
+.image-second::before {
+    content: "";
+    background-image: url(../images/girl.png);
+    width: 288px;
+    height: 351px;
+    position: absolute;
+    left: 43%;
+    top: 520%;
+    background-repeat: no-repeat;
+}
+
+.image-third::before {
+    content: "";
+    background-image: url(../images/girl2.png);
+    width: 288px;
+    height: 351px;
+    position: absolute;
+    right: 26%;
+    top: 520%;
+    background-repeat: no-repeat;
+
+}
+.cards {
+    @include mixin.test(space-between, center, 110px);
+}
+.wrapper-contact {
+    padding-top: 79px;
+    margin-bottom: 88px;
+}
+.container-contact {
+    @include mixin.test(space-between, center, 0);
+    flex-direction: column;
+
+    h3 {
+        @include mixin.font ('Roboto', normal, 700, 36px, 42px);
+        text-align: center;
+        color: $black-col;
+        margin-bottom: 9px;
+    }
+
+    h6 {
+        @include mixin.font ('Roboto', normal, 700, 17px, 20px);
+        text-align: center;
+        color: $black-col;
+        margin-bottom: 26px;
+        width: 496px;
+    }
+}
+
+
+.name-surname {
+    width: 366px;
+    @include mixin.test(space-between, center, 0);
+    margin-bottom: 18px;
+    input {
+        width: 153px;
+        height: 39px;
+        border: 1px solid $black-col;
+        padding: 5px;
+    }
+}
+
+.contact {
+    @include mixin.test(space-between, center, 0);
+    flex-direction: column;
+    
+    input {
+        width: 366px;
+        height: 39px;
+        border: 1px solid $black-col;
+        padding: 5px;
+        margin-bottom: 16px;
+    }
+}
+
+.name-surname-btn {
+    width: 115px;
+    height: 33px;
+    background-color: $black-col;
+    border: 1px solid $black-col;
+    border-radius: 100px;
+    @include mixin.font ('Roboto', normal, 400, 14px, 16px);
+    text-align: center;
+    color: $main-bg;
+}
+
+.footer-wrapper {
+    background-color: $black-col;
+    padding-top: 60px;
+    padding-bottom: 16px;
+}
+
+.container-footer-bottom {
+    h6 {
+        @include mixin.font ('Roboto', normal, 400, 14px, 23px);
+        text-align: center;
+        color: $main-bg;
+    }
+}
+
+.container-footer-top {
+        $var1: 1440;
+        $var2: 1144;
+        $var3: 100%;
+        width: $var2 * $var3 / $var1;
+        @include mixin.test(space-between, flex-start, 0);
+        margin: auto;
+        margin-bottom: 20px;
+}
+
+.container-footer-top-left {
+    @include mixin.test(flex-start, center, 45px);
+    flex-direction: column;
+
+    &-icons {
+        @include mixin.test(space-between, center, 22px);
+    }
+}
+
+.container-footer-top-right {
+        $var1: 1144;
+        $var2: 430;
+        $var3: 100%;
+        width: $var2 * $var3 / $var1;
+        @include mixin.test(space-between, flex-start, 0);
+
+        &-left {
+            h6 {
+                @include mixin.font ('Roboto', normal, 400, 14px, 23px);
+                color: $main-bg;
+                margin-bottom: 36px;
+            }
+            ul {
+                @include mixin.test(center, flex-start, 12px);
+                flex-direction: column;
+
+                li {
+                    list-style-type: none;
+
+                    a {
+                        @include mixin.font ('Roboto', normal, 400, 14px, 21px);
+                        color: $main-bg;
+                        text-decoration: none;
+                    }
+                }
+            }
+        }
+
+}
+
+.burger {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+}
+
+.burger div {
+	background-color: $black-col;
+	width: 15px;
+	height: 2px;
+}
+
+.burger {
+	display: none;
+}
+
+#burger {
+	display: none;
+}
+
+.container-circle-mobile {
+    display: none;
+}
+
+.navigation-mobile {
+    display: none;
+}
+
+.navigation-mobile {
+    ul {
+        @include mixin.test(center, center, 15px);
+        position: absolute;
+        left: 11%;
+        top: 3%;
+        height: 30px;
+        background-color: $banner-bg;
+        padding: 5px;
+        li {
+            list-style-type: none;
+            a {
+                @include mixin.font ('Roboto', normal, 700, 14px, 22px);
+                text-decoration: none;
+                color: $dark-col;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .header-wrapper {
+        .navig-logo {
+            width: 200px;
+            justify-content: flex-start;
+        }
+        .navigation {
+            display: none;
+        }
+    }
+    .burger {
+		display: flex;
+        position: absolute;
+        left: 5%;
+        top: 4%;
+	}
+
+	#burger {
+		display: none;
+	}
+
+	#burger:checked + .navigation-mobile {
+		display: block;
+	}
+
+    .container-banner {
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container-banner-text {
+        width: 100%;
+
+        h2 {
+            font-size: 40px;
+            line-height: 45px;
+            width: 100%;
+            padding-top: 20px;
+            margin-bottom: 24px;
+        }
+    }
+
+    .container-banner-image {
+        img {
+            width: 100%;
+        }
+    }
+
+    .wrapper-sellers {
+        padding-top: 0;
+        margin-bottom: 50px;
+    }
+
+    .box {
+        flex-wrap: wrap;
+
+        &-society-image {
+            img {
+                width: 100%;
+            }
+        }
+
+        &-society-text {
+            width: 100%;
+            
+            p {
+                font-size: 27px;
+            }
+        }
+    }
+
+    .wrapper-circle {
+        padding-top: 50px;
+        margin-bottom: 80px;
+    }
+
+    .container-circle {
+        align-items: flex-start;
+        gap: 0;
+
+        h2 {
+            margin-bottom: 40px;
+        }
+    }
+
+    .container-circle-mobile {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .container-circle-first-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        gap: 50px;
+        p {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    .container-circle-second-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        gap: 50px;
+        p {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    .container-circle-third-mobile {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 100%;
+        gap: 50px;
+        p {
+            font-size: 18px;
+            line-height: 24px;
+        }
+    }
+
+    .container-circle-first {
+        display: none;
+    }
+
+    .container-circle-second {
+        display: none;
+    }
+
+    .container-circle-first-item {
+        width: 100px;
+    }
+
+    .container-circle h4 {
+        margin-top: 90px;
+    }
+
+    .container-footer-top {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 50px;
+
+        &-left {
+            gap: 22px;
+        }
+
+        &-right {
+            width: 100%;
+        }
+    }
+
+    .name-surname {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        input {
+            width: 250px;
+        }
+    }
+
+    .contact {
+        input {
+            width: 250px;
+        }
+    }
+
+    .image-first::before {
+        display: none;
+    }
+
+    .image-second::before {
+        display: none;
+    }
+
+    .image-third::before {
+        display: none;
+    }
+
+    .cards {
+        flex-direction: column;
+    }
+
+    .container-foto-card {
+        gap: 0;
+    }
+}

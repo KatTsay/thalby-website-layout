@@ -1,0 +1,21 @@
+@mixin no-margin() {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+@mixin test($justify, $align, $gap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin font ($family, $style, $weight, $size, $height) {
+                font-family: $family;
+                font-style: $style;
+                font-weight: $weight;
+                font-size: $size;
+                line-height: $height;
+}
